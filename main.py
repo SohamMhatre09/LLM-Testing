@@ -675,14 +675,17 @@ def main():
     # 🔧 CONFIGURE YOUR MODELS HERE 🔧
     # List of models to test sequentially (add/remove as needed)
     MODELS_TO_TEST = [
-        "google/gemma-2-2b-it",
-        "distilgpt2", 
-        "gpt2",
-        # "EleutherAI/gpt-neo-125M",
-        # "microsoft/DialoGPT-medium",
-        # "google/gemma-2-9b-it",
-        # "meta-llama/Llama-2-7b-chat-hf"
+    "google/gemma-3-4b-it",
+    "google/gemma-3-1b-it",
+    "google/gemma-2-2b-it",
+    "google/gemma-2-9b-it",
+    "google/gemma-2-27b-it",
+    "google/shieldgemma-2b",
+    "google/shieldgemma-2-4b-it",
+    "google/shieldgemma-9b",
+    "google/shieldgemma-27b"
     ]
+
     
     # 🔧 CONFIGURE EXPERIMENT PARAMETERS 🔧
     TRIALS_PER_VARIATION = 4  # Number of trials per poisoned variation per temperature (4 for robust statistics)

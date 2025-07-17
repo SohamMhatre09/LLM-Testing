@@ -149,10 +149,70 @@ This project is based on cutting-edge research in LLM security:
 
 ## Usage
 
+### Single Model Testing
+
 1. **Install dependencies**: `pip install -r requirements.txt`
 2. **Configure model**: Edit `MODEL_NAME` in `main.py`
 3. **Run tests**: `./run.sh` or `python main.py`
-4. **View results**: Check `results/` directory for output
+4. **View results**: Check `results/` directory for structured JSON output
+
+### Multi-Model Comparison
+
+1. **Run multiple models**: Test different models by changing `MODEL_NAME` in `main.py`
+2. **Combine results**: `python combine_results.py`
+3. **View analysis**: Check `results/combined_analysis_*.json` and visualizations
+
+### Output Structure
+
+The enhanced system now generates comprehensive JSON statistics:
+
+**Per-Model Results** (`results/model_name.json`):
+```json
+{
+  "experiment_info": {
+    "model_name": "google/gemma-2-2b-it",
+    "total_trials": 750,
+    "experiment_type": "systematic_variation_testing"
+  },
+  "analysis": {
+    "overall_statistics": {
+      "injection_success_rate": 45.2,
+      "model_robustness_score": 54.8,
+      "average_response_time": 0.234
+    },
+    "by_variation": {
+      "variation_1": {
+        "strategy_name": "HTML Comment Injection",
+        "success_rate": 23.5,
+        "effectiveness_ranking": 8
+      }
+    },
+    "top_attacks": {
+      "most_effective_variations": [...],
+      "least_effective_variations": [...]
+    },
+    "vulnerability_assessment": {
+      "overall_vulnerability": "Medium",
+      "recommended_defenses": [...]
+    }
+  }
+}
+```
+
+**Combined Analysis** (`results/combined_analysis_*.json`):
+- Cross-model comparison statistics
+- Attack effectiveness rankings across all models  
+- Model vulnerability rankings
+- Defense recommendations based on patterns
+- Critical vulnerability identification
+
+### Systematic Testing Process
+
+The enhanced system now tests **all 15 poisoned variations** systematically:
+- **5 prompt types** × **15 attack variations** × **10 trials each** = **750 total trials per model**
+- Each variation tested against multiple prompt defense strategies
+- Comprehensive statistics for identifying most/least effective attacks
+- Response time tracking for performance analysis
 
 ## Testing Methodology
 

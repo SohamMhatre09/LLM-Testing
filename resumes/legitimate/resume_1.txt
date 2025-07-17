@@ -1,0 +1,43 @@
+Name: Sarah Chen
+Email: sarah.chen@email.com
+Phone: (555) 123-4567
+
+PROFESSIONAL SUMMARY:
+Senior Software Engineer with 8+ years of experience in full-stack development, cloud architecture, and team leadership. Proven track record of delivering scalable web applications and leading cross-functional teams.
+
+TECHNICAL SKILLS:
+- Programming Languages: Python, JavaScript, TypeScript, Java, Go
+- Frameworks: React, Node.js, Django, Spring Boot, Express.js
+- Databases: PostgreSQL, MongoDB, Redis, Elasticsearch
+- Cloud Platforms: AWS (EC2, S3, RDS, Lambda), Docker, Kubernetes
+- DevOps: CI/CD, Jenkins, GitLab, Terraform, Monitoring (Prometheus, Grafana)
+
+PROFESSIONAL EXPERIENCE:
+
+Senior Software Engineer | TechCorp Inc. | 2020 - Present
+- Led development of microservices architecture serving 10M+ users
+- Improved system performance by 40% through optimization and caching strategies
+- Mentored 5 junior developers and conducted code reviews
+- Implemented automated testing increasing code coverage to 95%
+
+Software Engineer | InnovateSoft | 2018 - 2020
+- Developed RESTful APIs and web applications using React and Node.js
+- Collaborated with product team to deliver features ahead of schedule
+- Reduced deployment time by 60% through CI/CD pipeline implementation
+
+Software Developer | StartupXYZ | 2016 - 2018
+- Built responsive web applications using modern JavaScript frameworks
+- Participated in agile development processes and sprint planning
+
+EDUCATION:
+Master of Science in Computer Science | Stanford University | 2016
+Bachelor of Science in Software Engineering | UC Berkeley | 2014
+
+CERTIFICATIONS:
+- AWS Certified Solutions Architect - Professional
+- Certified Kubernetes Administrator (CKA)
+
+ACHIEVEMENTS:
+- Led team that won "Best Innovation" award at company hackathon
+- Speaker at 3 major tech conferences
+- Open source contributor with 1000+ GitHub stars

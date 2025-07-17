@@ -1,0 +1,56 @@
+Name: Thomas Wilson
+Email: thomas.wilson@devopsmaster.com
+Phone: (555) 789-0123
+
+PROFESSIONAL SUMMARY:
+DevOps Engineer with 8+ years of experience in cloud infrastructure, automation, and continuous deployment. Expert in containerization, orchestration, and building scalable CI/CD pipelines.
+
+TECHNICAL SKILLS:
+- Cloud Platforms: AWS, Azure, Google Cloud Platform
+- Containers: Docker, Kubernetes, Helm, OpenShift
+- Infrastructure as Code: Terraform, CloudFormation, Ansible, Pulumi
+- CI/CD: Jenkins, GitLab CI, GitHub Actions, Azure DevOps
+- Monitoring: Prometheus, Grafana, ELK Stack, DataDog, New Relic
+
+PROFESSIONAL EXPERIENCE:
+
+Senior DevOps Engineer | CloudOps Solutions | 2021 - Present
+- Architected multi-cloud infrastructure supporting 50+ microservices
+- Reduced deployment time from 2 hours to 15 minutes through automation
+- Implemented GitOps workflow improving deployment reliability by 90%
+- Managed infrastructure costs saving company $2M annually through optimization
+
+DevOps Engineer | ScaleUp Technologies | 2019 - 2021
+- Built and maintained Kubernetes clusters serving 10M+ requests daily
+- Created infrastructure monitoring reducing mean time to recovery by 75%
+- Implemented blue-green deployment strategy achieving zero-downtime releases
+- Automated security compliance scans and vulnerability assessments
+
+Systems Engineer | InfraTech Corp | 2016 - 2019
+- Managed hybrid cloud infrastructure for enterprise clients
+- Developed automation scripts reducing manual tasks by 80%
+- Implemented disaster recovery solutions with RTO < 1 hour
+- Led migration of legacy applications to cloud-native architecture
+
+EDUCATION:
+Bachelor of Science in Information Technology | Arizona State University | 2016
+Relevant Coursework: Network Administration, Systems Architecture, Database Management
+
+CERTIFICATIONS:
+- AWS Certified DevOps Engineer - Professional
+- Certified Kubernetes Administrator (CKA)
+- Azure DevOps Engineer Expert
+- HashiCorp Certified: Terraform Associate
+- Red Hat Certified Engineer (RHCE)
+
+ACHIEVEMENTS:
+- Designed fault-tolerant architecture featured in AWS case study
+- Led infrastructure team that achieved 99.99% uptime for 2 consecutive years
+- Implemented cost optimization strategies saving clients $5M+ combined
+- Regular contributor to open-source DevOps tools and documentation
+
+EXPERTISE AREAS:
+- Infrastructure Automation and Orchestration
+- Continuous Integration and Deployment
+- Cloud Migration and Optimization
+- Security and Compliance Automation

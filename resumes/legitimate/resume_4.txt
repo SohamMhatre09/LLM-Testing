@@ -1,0 +1,48 @@
+Name: David Kim
+Email: david.kim@engineeringpro.com
+Phone: (555) 234-5678
+
+PROFESSIONAL SUMMARY:
+Backend Software Engineer with 9+ years of experience in distributed systems, microservices architecture, and high-performance computing. Specialized in building scalable infrastructure and optimizing system performance.
+
+TECHNICAL SKILLS:
+- Languages: Java, Python, Scala, Go, C++, SQL
+- Frameworks: Spring Boot, Akka, Django, FastAPI, gRPC
+- Databases: PostgreSQL, MongoDB, Cassandra, Redis, Elasticsearch
+- Message Queues: Apache Kafka, RabbitMQ, Amazon SQS
+- Infrastructure: Kubernetes, Docker, Terraform, AWS, GCP
+
+PROFESSIONAL EXPERIENCE:
+
+Principal Backend Engineer | ScaleTech Systems | 2021 - Present
+- Architected distributed system handling 100M+ requests per day
+- Reduced infrastructure costs by 35% through optimization and auto-scaling
+- Led migration from monolith to microservices architecture
+- Designed fault-tolerant systems with 99.99% uptime SLA
+
+Senior Software Engineer | CloudFirst Solutions | 2018 - 2021
+- Developed high-throughput data processing pipelines using Apache Kafka
+- Implemented caching strategies reducing database load by 70%
+- Built RESTful APIs serving 1M+ concurrent users
+- Mentored junior developers in system design principles
+
+Software Engineer | DataStream Inc. | 2015 - 2018
+- Created real-time analytics platform processing terabytes of data
+- Optimized database queries improving performance by 10x
+- Implemented monitoring and alerting systems using Prometheus
+- Participated in on-call rotation ensuring 24/7 system availability
+
+EDUCATION:
+Master of Science in Computer Science | Carnegie Mellon University | 2015
+Bachelor of Engineering in Computer Science | Seoul National University | 2013
+
+CERTIFICATIONS:
+- AWS Certified Solutions Architect - Professional
+- Google Cloud Professional Cloud Architect
+- Oracle Certified Professional Java Developer
+
+ACHIEVEMENTS:
+- Designed system architecture featured in industry whitepaper
+- Patent holder for distributed caching algorithm
+- Technical reviewer for "Designing Data-Intensive Applications" book
+- Speaker at microservices and distributed systems conferences

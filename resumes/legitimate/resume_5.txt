@@ -1,0 +1,52 @@
+Name: Jessica Taylor
+Email: j.taylor@airesearch.org
+Phone: (555) 345-6789
+
+PROFESSIONAL SUMMARY:
+Machine Learning Engineer with 5+ years of experience in developing and deploying AI models for production systems. Strong background in deep learning, computer vision, and natural language processing.
+
+TECHNICAL SKILLS:
+- Languages: Python, R, SQL, JavaScript, C++
+- ML Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras, XGBoost
+- Data Processing: Pandas, NumPy, Apache Spark, Dask
+- MLOps: MLflow, Kubeflow, Docker, Kubernetes, AWS SageMaker
+- Visualization: Matplotlib, Seaborn, Plotly, Tableau
+
+PROFESSIONAL EXPERIENCE:
+
+Senior ML Engineer | AI Innovations Lab | 2022 - Present
+- Developed computer vision models achieving 98% accuracy in image classification
+- Built recommendation system increasing user engagement by 45%
+- Deployed models to production serving 5M+ predictions daily
+- Established MLOps pipeline reducing model deployment time by 80%
+
+Machine Learning Engineer | DataScience Corp | 2020 - 2022
+- Created NLP models for sentiment analysis and text classification
+- Implemented A/B testing framework for model performance evaluation
+- Optimized deep learning models reducing inference time by 60%
+- Collaborated with product team to translate business requirements into ML solutions
+
+Data Scientist | Analytics Plus | 2019 - 2020
+- Analyzed large datasets to identify business insights and trends
+- Built predictive models for customer churn with 85% accuracy
+- Created automated reporting dashboards for executive leadership
+- Presented findings to stakeholders and business leaders
+
+EDUCATION:
+Master of Science in Machine Learning | Georgia Tech | 2019
+Bachelor of Science in Mathematics | UC Los Angeles | 2017
+
+RESEARCH PUBLICATIONS:
+- "Efficient Neural Architecture Search for Computer Vision" - ICML 2023
+- "Federated Learning in Healthcare Applications" - NeurIPS 2022
+- "Optimizing Deep Learning Models for Edge Deployment" - ICLR 2021
+
+CERTIFICATIONS:
+- AWS Certified Machine Learning - Specialty
+- Google Cloud Professional Machine Learning Engineer
+- TensorFlow Developer Certificate
+
+ACHIEVEMENTS:
+- Winner of Kaggle competition with top 1% ranking
+- Research intern at Google DeepMind (Summer 2021)
+- Technical lead for open-source ML library with 5000+ GitHub stars

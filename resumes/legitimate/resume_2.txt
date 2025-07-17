@@ -1,0 +1,45 @@
+Name: Michael Rodriguez
+Email: m.rodriguez@techmail.com
+Phone: (555) 987-6543
+
+PROFESSIONAL SUMMARY:
+Full-Stack Software Engineer with 6+ years of experience specializing in scalable web applications, API design, and database optimization. Strong background in both frontend and backend technologies.
+
+TECHNICAL SKILLS:
+- Languages: JavaScript, Python, C++, SQL, TypeScript
+- Frontend: React, Vue.js, HTML5, CSS3, Sass, Redux
+- Backend: Node.js, Express, Django, Flask, FastAPI
+- Databases: MySQL, PostgreSQL, MongoDB, SQLite
+- Cloud & DevOps: AWS, Azure, Docker, Git, Jenkins
+
+PROFESSIONAL EXPERIENCE:
+
+Full-Stack Developer | WebSolutions Pro | 2021 - Present
+- Architected and developed e-commerce platform handling $5M+ in transactions
+- Optimized database queries reducing response time by 50%
+- Implemented real-time features using WebSocket and Socket.io
+- Built responsive UI components used by 500K+ active users
+
+Software Engineer | DataDriven Labs | 2019 - 2021
+- Developed data visualization dashboards for enterprise clients
+- Created automated data pipelines processing 1TB+ daily
+- Integrated third-party APIs and payment systems
+- Maintained 99.9% uptime for critical applications
+
+Junior Developer | CodeCraft Solutions | 2018 - 2019
+- Built and maintained company website and internal tools
+- Participated in code reviews and pair programming sessions
+- Learned industry best practices in agile development
+
+EDUCATION:
+Bachelor of Science in Computer Science | MIT | 2018
+Relevant Coursework: Data Structures, Algorithms, Database Systems, Software Engineering
+
+PROJECTS:
+- Task Management App: Built full-stack application with React and Node.js, deployed on AWS
+- Weather API Service: Created RESTful API serving weather data to 10,000+ requests/day
+- Machine Learning Classifier: Developed image classification model with 92% accuracy
+
+CERTIFICATIONS:
+- AWS Certified Developer - Associate
+- MongoDB Certified Developer

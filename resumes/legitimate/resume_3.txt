@@ -1,0 +1,50 @@
+Name: Emily Watson
+Email: emily.watson@devmail.com
+Phone: (555) 456-7890
+
+PROFESSIONAL SUMMARY:
+Senior Frontend Engineer with 7+ years of experience creating user-centric web applications. Expert in modern JavaScript frameworks and responsive design with a passion for accessibility and performance optimization.
+
+TECHNICAL SKILLS:
+- Frontend: React, Angular, Vue.js, JavaScript (ES6+), TypeScript
+- Styling: CSS3, Sass, Styled-Components, Tailwind CSS, Bootstrap
+- Tools: Webpack, Vite, Babel, ESLint, Prettier, Figma
+- Testing: Jest, Cypress, React Testing Library, Selenium
+- Mobile: React Native, Progressive Web Apps (PWA)
+
+PROFESSIONAL EXPERIENCE:
+
+Senior Frontend Engineer | UX Innovations | 2020 - Present
+- Lead frontend development for SaaS platform with 2M+ users
+- Improved page load times by 65% through code splitting and lazy loading
+- Implemented accessibility features achieving WCAG 2.1 AA compliance
+- Mentored team of 4 frontend developers
+
+Frontend Developer | Creative Digital | 2018 - 2020
+- Developed responsive web applications for Fortune 500 clients
+- Collaborated with UX designers to implement pixel-perfect designs
+- Built reusable component library adopted across 15+ projects
+- Achieved 100% mobile responsiveness across all deliverables
+
+UI Developer | MediaTech Studios | 2017 - 2018
+- Created interactive multimedia websites and marketing campaigns
+- Optimized website performance achieving 90+ Google PageSpeed scores
+- Implemented cross-browser compatibility for IE11+ support
+
+EDUCATION:
+Bachelor of Arts in Computer Science | University of Washington | 2017
+Minor in Digital Design
+
+PROJECTS:
+- Portfolio Website: Award-winning personal portfolio featured in design showcases
+- E-learning Platform: Built interactive course platform with video streaming
+- Open Source Component Library: 2000+ downloads on npm
+
+CERTIFICATIONS:
+- Google Mobile Web Specialist
+- W3C Accessibility Specialist
+
+ACHIEVEMENTS:
+- Winner of "Best User Experience" at annual company design challenge
+- Featured speaker at 2 frontend development conferences
+- Maintains popular frontend development blog with 50K+ monthly readers

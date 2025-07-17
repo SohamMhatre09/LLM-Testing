@@ -1,0 +1,52 @@
+Name: Alexander Petrov
+Email: alex.petrov@securitytech.com
+Phone: (555) 567-8901
+
+PROFESSIONAL SUMMARY:
+Cybersecurity Software Engineer with 6+ years of experience in developing secure applications, implementing security protocols, and conducting vulnerability assessments. Expert in cryptography and secure system design.
+
+TECHNICAL SKILLS:
+- Languages: C, C++, Python, Java, Rust, Assembly
+- Security: Cryptography, PKI, OAuth, SAML, Penetration Testing
+- Frameworks: Spring Security, OWASP, OpenSSL, libsodium
+- Tools: Wireshark, Metasploit, Burp Suite, Nmap, Kali Linux
+- Compliance: SOC 2, PCI DSS, GDPR, HIPAA
+
+PROFESSIONAL EXPERIENCE:
+
+Senior Security Engineer | CyberGuard Solutions | 2021 - Present
+- Designed and implemented zero-trust security architecture
+- Conducted security audits for Fortune 100 companies
+- Developed encryption libraries used by 500+ enterprise clients
+- Led incident response team for critical security breaches
+
+Security Software Engineer | SecureTech Inc. | 2019 - 2021
+- Built secure authentication and authorization systems
+- Implemented end-to-end encryption for messaging platform
+- Performed code reviews focusing on security vulnerabilities
+- Created security training programs for development teams
+
+Software Developer | DefenseWare | 2018 - 2019
+- Developed security tools for government and military applications
+- Implemented secure communication protocols for classified systems
+- Participated in red team exercises and vulnerability assessments
+- Maintained security clearance for sensitive projects
+
+EDUCATION:
+Master of Science in Cybersecurity | Johns Hopkins University | 2018
+Bachelor of Science in Computer Science | Virginia Tech | 2016
+
+CERTIFICATIONS:
+- Certified Information Systems Security Professional (CISSP)
+- Certified Ethical Hacker (CEH)
+- AWS Certified Security - Specialty
+- GIAC Penetration Tester (GPEN)
+
+ACHIEVEMENTS:
+- Discovered critical vulnerability in popular open-source library
+- Presented security research at Black Hat and DEF CON conferences
+- Security consultant for 3 major data breach investigations
+- Author of security best practices guide with 100K+ downloads
+
+SECURITY CLEARANCE:
+- Active Secret Security Clearance (US Department of Defense)

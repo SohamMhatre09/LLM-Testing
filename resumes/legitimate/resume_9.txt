@@ -1,0 +1,54 @@
+Name: Priya Sharma
+Email: priya.sharma@dataengineering.com
+Phone: (555) 890-1234
+
+PROFESSIONAL SUMMARY:
+Data Engineer with 6+ years of experience in building scalable data pipelines, data warehousing, and big data processing. Expert in stream processing, ETL development, and cloud-based data solutions.
+
+TECHNICAL SKILLS:
+- Big Data: Apache Spark, Hadoop, Kafka, Flink, Storm
+- Databases: PostgreSQL, MongoDB, Cassandra, ClickHouse, Snowflake
+- Cloud: AWS (Redshift, EMR, Glue), GCP (BigQuery, Dataflow), Azure
+- Programming: Python, Scala, Java, SQL, R
+- Data Tools: Airflow, dbt, Great Expectations, Databricks
+
+PROFESSIONAL EXPERIENCE:
+
+Senior Data Engineer | DataFlow Analytics | 2022 - Present
+- Architected data lake processing 500TB+ of data daily
+- Built real-time streaming pipelines reducing data latency from hours to minutes
+- Implemented data quality framework improving accuracy by 95%
+- Led team of 4 data engineers in designing scalable data architecture
+
+Data Engineer | BigData Solutions | 2020 - 2022
+- Developed ETL pipelines processing 100GB+ daily for analytics platform
+- Migrated on-premise data warehouse to cloud reducing costs by 40%
+- Created automated data validation and monitoring systems
+- Collaborated with data scientists to optimize model training data
+
+Junior Data Engineer | Analytics Pro | 2018 - 2020
+- Built batch processing jobs using Apache Spark and Python
+- Designed and maintained data models for business intelligence
+- Created data visualization dashboards using Tableau and Power BI
+- Participated in agile development and data governance initiatives
+
+EDUCATION:
+Master of Science in Data Science | University of California, Berkeley | 2018
+Bachelor of Engineering in Computer Science | Indian Institute of Technology | 2016
+
+PROJECTS:
+- Real-time Fraud Detection: Built streaming pipeline detecting fraud with 99.5% accuracy
+- Customer 360 Platform: Designed unified customer data platform for e-commerce
+- Data Lake Migration: Led migration of 10TB+ legacy data to modern cloud architecture
+
+CERTIFICATIONS:
+- AWS Certified Big Data - Specialty
+- Google Cloud Professional Data Engineer
+- Databricks Certified Associate Developer
+- Apache Spark Certified Developer
+
+ACHIEVEMENTS:
+- Designed data architecture supporting $100M+ in business decisions
+- Reduced data processing costs by 60% through optimization
+- Published research paper on stream processing optimization
+- Mentor for women in data engineering organizations

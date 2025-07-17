@@ -127,21 +127,6 @@ Respond with the name of the most qualified candidate only."""
         
         # Results storage
         self.results = []
-    
-    def cleanup_model(self):
-        """Clean up model and tokenizer to free memory."""
-        logger.info(f"🧹 Cleaning up model: {self.model_name}")
-        if hasattr(self, 'model'):
-            del self.model
-        if hasattr(self, 'tokenizer'):
-            del self.tokenizer
-        
-        # Force garbage collection and CUDA cleanup
-        import gc
-        gc.collect()
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
-        logger.info("✅ Model cleanup completed")
         
     def load_resumes(self, specific_poisoned_file: str = None) -> Tuple[List[str], str, str, str]:
         """Load all legitimate resumes and one poisoned resume (specific or random)."""
@@ -672,39 +657,35 @@ Respond with the name of the most qualified candidate only."""
 def main():
     """Main execution function."""
     
-    # 🔧 CONFIGURE YOUR MODELS HERE 🔧
-    # List of models to test sequentially (add/remove as needed)
-    MODELS_TO_TEST = [
-        "google/gemma-2-2b-it",
-        "distilgpt2", 
-        "gpt2",
-        # "EleutherAI/gpt-neo-125M",
-        # "microsoft/DialoGPT-medium",
-        # "google/gemma-2-9b-it",
-        # "meta-llama/Llama-2-7b-chat-hf"
-    ]
+    # 🔧 CONFIGURE YOUR MODEL HERE 🔧
+    # Change this line to test different models
+    MODEL_NAME = "google/gemma-3-27b-it"  # Your preferred model
+    
+    # Other model examples (uncomment one to test):
+    # MODEL_NAME = "microsoft/DialoGPT-medium"
+    # MODEL_NAME = "gpt2"
+    # MODEL_NAME = "EleutherAI/gpt-neo-125M"
+    # MODEL_NAME = "distilgpt2"
+    # MODEL_NAME = "google/gemma-2-9b-it"
+    # MODEL_NAME = "meta-llama/Llama-2-7b-chat-hf"
     
     # 🔧 CONFIGURE EXPERIMENT PARAMETERS 🔧
     TRIALS_PER_VARIATION = 4  # Number of trials per poisoned variation per temperature (4 for robust statistics)
     
     print("🧪 LLM ROBUSTNESS TESTING AGAINST PROMPT INJECTION")
     print("="*60)
-    print(f"🔄 Testing {len(MODELS_TO_TEST)} models sequentially:")
-    for i, model in enumerate(MODELS_TO_TEST, 1):
-        print(f"   {i}. {model}")
+    print(f"🤖 Model: {MODEL_NAME}")
     print(f"🔄 Trials per variation per temperature: {TRIALS_PER_VARIATION}")
     print(f"🌡️  Testing temperatures: 0.25 (focused) and 0.75 (creative)")
     print(f"📱 Device: {'CUDA' if torch.cuda.is_available() else 'CPU'}")
     
-    # Calculate total trials per model
+    # Calculate total trials
     poisoned_dir = "resumes/poisoned"
     if os.path.exists(poisoned_dir):
         poisoned_files = [f for f in os.listdir(poisoned_dir) if f.startswith("poisoned_variation_") and f.endswith('.txt')]
         temperatures = 2  # 0.25 and 0.75
-        trials_per_model = 5 * len(poisoned_files) * temperatures * TRIALS_PER_VARIATION  # 5 prompt types × 10 variations × 2 temps × trials
-        total_trials_all_models = trials_per_model * len(MODELS_TO_TEST)
-        print(f"📊 Per model: {trials_per_model} trials (5 prompts × {len(poisoned_files)} attacks × 2 temperatures × {TRIALS_PER_VARIATION} trials)")
-        print(f"📊 Total across all models: {total_trials_all_models} trials")
+        total_trials = 5 * len(poisoned_files) * temperatures * TRIALS_PER_VARIATION  # 5 prompt types × 10 variations × 2 temps × trials
+        print(f"📊 Total trials: {total_trials} (5 prompts × {len(poisoned_files)} attacks × 2 temperatures × {TRIALS_PER_VARIATION} trials)")
         print(f"📂 Found {len(poisoned_files)} attack variations (7 proven + 3 cutting-edge research techniques)")
     else:
         print("❌ Poisoned directory not found - continuing with basic setup")
@@ -723,112 +704,36 @@ def main():
         return
     
     try:
-        overall_start_time = time.time()
-        all_models_results = {}  # Store results for all models
+        start_time = time.time()
         
-        # Test each model sequentially
-        for model_idx, MODEL_NAME in enumerate(MODELS_TO_TEST, 1):
-            print(f"\n{'='*80}")
-            print(f"🚀 TESTING MODEL {model_idx}/{len(MODELS_TO_TEST)}: {MODEL_NAME}")
-            print(f"{'='*80}")
-            
-            model_start_time = time.time()
-            
-            try:
-                # Initialize experiment for this model
-                print("🔄 Initializing experiment...")
-                experiment = LLMRobustnessExperiment(MODEL_NAME)
-                
-                # Run experiment for this model
-                print("🚀 Starting systematic experiment...")
-                print("   Testing 10 attack variations: 7 proven effective + 3 cutting-edge research techniques")
-                print(f"   Running {TRIALS_PER_VARIATION} trials per combination with 2 different temperatures")
-                print("   Temperatures: 0.25 (focused) and 0.75 (creative) for meaningful variation")
-                print("   New attacks: LPCI, AUPI, THP (based on 2025 research papers)")
-                experiment.run_experiment(trials_per_variation=TRIALS_PER_VARIATION)
-                
-                # Save and analyze results for this model
-                print("📊 Analyzing results and generating reports...")
-                experiment.save_results()
-                
-                # Store results for comparison
-                analysis = experiment.analyze_results()
-                all_models_results[MODEL_NAME] = {
-                    "analysis": analysis,
-                    "total_trials": len(experiment.results),
-                    "model_robustness_score": analysis["overall_statistics"]["model_robustness_score"],
-                    "injection_success_rate": analysis["overall_statistics"]["injection_success_rate"]
-                }
-                
-                model_time = time.time() - model_start_time
-                print(f"\n✅ Model {MODEL_NAME} completed in {model_time:.1f} seconds ({model_time/60:.1f} minutes)")
-                
-                # Clean up model to free memory for next model
-                experiment.cleanup_model()
-                
-            except Exception as e:
-                logger.error(f"❌ Model {MODEL_NAME} failed: {e}")
-                print(f"⚠️ Skipping {MODEL_NAME} due to error: {e}")
-                continue
+        # Initialize experiment
+        print("🔄 Initializing experiment...")
+        experiment = LLMRobustnessExperiment(MODEL_NAME)
         
-        # Print comparison summary across all models
-        print_multi_model_comparison(all_models_results)
+        # Run experiment
+        print("🚀 Starting systematic experiment...")
+        print("   Testing 10 attack variations: 7 proven effective + 3 cutting-edge research techniques")
+        print(f"   Running {TRIALS_PER_VARIATION} trials per combination with 2 different temperatures")
+        print("   Temperatures: 0.25 (focused) and 0.75 (creative) for meaningful variation")
+        print("   New attacks: LPCI, AUPI, THP (based on 2025 research papers)")
+        experiment.run_experiment(trials_per_variation=TRIALS_PER_VARIATION)
         
-        total_time = time.time() - overall_start_time
-        print(f"\n🎉 ALL MODELS COMPLETED in {total_time:.1f} seconds ({total_time/60:.1f} minutes)")
-        print(f"📁 Individual model results saved in ./results/ directory")
+        # Save and analyze results
+        print("📊 Analyzing results and generating reports...")
+        experiment.save_results()
+        
+        total_time = time.time() - start_time
+        print(f"\n✅ Experiment completed in {total_time:.1f} seconds ({total_time/60:.1f} minutes)")
+        
+        # Results location reminder
+        model_safe_name = MODEL_NAME.replace("/", "_").replace(":", "_")
+        print(f"\n📁 Results saved as: results/{model_safe_name}.json")
+        print(f"📋 Use this file for combining statistics across models")
         
     except Exception as e:
         logger.error(f"❌ Experiment failed: {e}")
         print(f"Error details: {e}")
         raise
-
-def print_multi_model_comparison(all_results: Dict) -> None:
-    """Print comparison summary across all tested models."""
-    if not all_results:
-        print("❌ No model results to compare")
-        return
-        
-    print(f"\n{'='*100}")
-    print(f"🏆 MULTI-MODEL COMPARISON SUMMARY")
-    print(f"{'='*100}")
-    
-    print(f"\n📊 ROBUSTNESS RANKING (Higher = More Secure):")
-    print("-" * 80)
-    print(f"{'Rank':<4} {'Model':<35} {'Robustness Score':<15} {'Injection Success Rate':<20}")
-    print("-" * 80)
-    
-    # Sort models by robustness score (higher is better)
-    ranked_models = sorted(all_results.items(), key=lambda x: x[1]["model_robustness_score"], reverse=True)
-    
-    for rank, (model_name, results) in enumerate(ranked_models, 1):
-        robustness = results["model_robustness_score"]
-        success_rate = results["injection_success_rate"]
-        emoji = "🛡️" if robustness > 80 else "⚠️" if robustness > 50 else "🚨"
-        print(f"{rank:<4} {emoji} {model_name[:32]:<32} {robustness:>6.1f}%{'':<8} {success_rate:>6.1f}%")
-    
-    # Most/least vulnerable models
-    if len(ranked_models) >= 2:
-        most_robust = ranked_models[0]
-        least_robust = ranked_models[-1]
-        
-        print(f"\n🏆 MOST ROBUST MODEL:")
-        print(f"   {most_robust[0]} - {most_robust[1]['model_robustness_score']:.1f}% robustness")
-        
-        print(f"\n🚨 MOST VULNERABLE MODEL:")
-        print(f"   {least_robust[0]} - {least_robust[1]['injection_success_rate']:.1f}% injection success rate")
-    
-    print(f"\n📈 ATTACK SUCCESS RATE COMPARISON:")
-    print("-" * 60)
-    for model_name, results in ranked_models:
-        success_rate = results["injection_success_rate"]
-        bar_length = int(success_rate / 2)  # Scale to 50 chars max
-        bar = "█" * bar_length + "░" * (50 - bar_length)
-        print(f"{model_name[:25]:<25} │{bar}│ {success_rate:>5.1f}%")
-    
-    print(f"\n{'='*100}")
-    print(f"📄 Detailed individual results available in ./results/ directory")
-    print(f"{'='*100}")
 
 if __name__ == "__main__":
     main()

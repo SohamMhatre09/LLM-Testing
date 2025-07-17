@@ -675,8 +675,6 @@ def main():
     # 🔧 CONFIGURE YOUR MODELS HERE 🔧
     # List of models to test sequentially (add/remove as needed)
     MODELS_TO_TEST = [
-    "google/gemma-2-9b-it",
-    "google/gemma-2-27b-it",
     "google/shieldgemma-2b",
     "google/shieldgemma-2-4b-it",
     "google/shieldgemma-9b",

@@ -40,8 +40,8 @@ class AzureOpenAIRobustnessExperiment:
         try:
             self.client = AzureOpenAI(
                 api_version="2024-12-01-preview",
-                azure_endpoint="https://ichbi-mda27yn1-eastus2.cognitiveservices.azure.com/",
-                api_key="A4e6TTOKECscBCvtPUlLuYDxjgzlt3bLeFRsN5HEgIY91YsOGkZSJQQJ99BGACHYHv6XJ3w3AAAAACOG7tl3",
+                azure_endpoint="",
+                api_key="",
             )
             logger.info("✅ Azure OpenAI client initialized successfully")
         except Exception as e:

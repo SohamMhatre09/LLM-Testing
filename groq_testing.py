@@ -21,7 +21,7 @@ class GroqRobustnessExperiment:
         logger.info(f"Initializing Groq client for model: {model_name}")
         try:
             self.client = Groq(
-                api_key="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"
+                api_key=""
             )
             logger.info(f"✅ Groq client initialized successfully for model: {model_name}")
         except Exception as e:

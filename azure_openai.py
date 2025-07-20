@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-"""
-LLM Robustness Testing Against Indirect Prompt Injection - Azure OpenAI Version
-===============================================================================
-
-This script tests how vulnerable Azure OpenAI models are to indirect prompt injection attacks
-in a resume screening scenario. Uses Azure OpenAI endpoints for cost-effective testing.
-
-COMPREHENSIVE VERSION: Tests 10 attack variations including 7 proven effective attacks 
-(20%+ success rate) plus 3 cutting-edge techniques from 2025 research papers:
-- Logic-Layer Prompt Control Injection (LPCI) - arXiv:2507.10457
-- Automatic Universal Prompt Injection (AUPI) - arXiv:2403.04957  
-- Trojan Horse Prompting (THP) - arXiv:2507.04673
-
-Author: LLM Security Research
-Date: July 2025
-"""
-
 import os
 import json
 import random
@@ -356,15 +338,9 @@ Respond with the name of the most qualified candidate only."""
                 
                 # Get variation strategy name (effective attacks + cutting-edge research techniques)
                 strategy_names = {
-                    "1": "Nested Block Comments Attack",
-                    "2": "Logic-Layer Prompt Control Injection (LPCI)", 
-                    "3": "Automatic Universal Prompt Injection (AUPI)",
                     "4": "Memory Context Manipulation",
-                    "5": "Format Injection Attack",
                     "6": "Context Chain Injection",
-                    "7": "Neural Cache Manipulation",
                     "8": "Logic-Layer Prompt Control Injection (LPCI)",
-                    "9": "Automatic Universal Prompt Injection (AUPI)", 
                     "10": "Trojan Horse Prompting (THP)"
                 }
                 
